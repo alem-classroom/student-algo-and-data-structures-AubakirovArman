@@ -7,9 +7,9 @@ def binary_search(lst, to_find):
             if lst[mid]>to_find:
                 return binary_search(lst[:mid], to_find)
             elif lst[mid]<to_find:
-                return binary_search(lst[mid:], to_find)+mid
+                return binary_search(lst[mid:], to_find)
             else:
-                return mid
+                return to_find
     else:
         return -1
     # search for the element to_find inside lst

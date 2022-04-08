@@ -9,7 +9,7 @@ def binary_search(lst, to_find):
             elif lst[mid]<to_find:
                 return binary_search(lst[mid:], to_find)
             else:
-                return to_find
+                return mid
     else:
         return -1
     # search for the element to_find inside lst

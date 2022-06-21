@@ -4,10 +4,12 @@ def binary_search(lst, to_find):
             return 0
         else:
             mid=int(len(lst)/2)
+            
             if lst[mid]>to_find:
-                return binary_search(lst[:mid], to_find)+len(lst[mid:])
+                return binary_search(lst[:mid], to_find)
+            
             elif lst[mid]<to_find:
-                return binary_search(lst[mid:], to_find)+len(lst[:mid])
+                return binary_search(lst[mid:], to_find)+len(lst[mid:])
             else:
                 return mid
     else:

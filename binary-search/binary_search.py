@@ -1,5 +1,5 @@
 def binary_search(lst, to_find):
-    if len(lst) == 0:
+	if len(lst) == 0:
 		return False
 	else:
 		mid = len(lst) // 2

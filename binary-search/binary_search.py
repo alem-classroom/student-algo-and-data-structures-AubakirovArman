@@ -1,17 +1,19 @@
-def binary_search(lst, to_find,col=0):
-    if to_find in lst:
-        if len(lst)==1:
-            return 0
+def binary_search(array, element):
+    mid = 0
+    start = 0
+    end = len(array)
+    step = 0
+
+    while (start <= end):
+        
+        step = step+1
+        mid = (start + end) // 2
+
+        if element == array[mid]:
+            return mid
+
+        if element < array[mid]:
+            end = mid - 1
         else:
-            mid=len(lst)//2
-            
-            if lst[mid]>to_find:
-                return binary_search(lst[:mid], to_find,col)
-            elif lst[mid]<to_find:
-                return binary_search(lst[mid:], to_find,col+1)+len(lst[mid:])
-            else:
-                if col>1:
-                    return mid-1
-                return mid
-    else:
-        return -1
+            start = mid + 1
+    return -1

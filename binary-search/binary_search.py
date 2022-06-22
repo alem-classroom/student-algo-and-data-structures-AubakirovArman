@@ -1,34 +1,22 @@
 
-def binary_search(lst, fnd):
-    if fnd in lst:
-        return lst.index(fnd)
-        # if lst[0]==fnd:
-        #     return 0
-        # elif lst[len(lst)-1]==fnd:
-        #     return len(lst)-1
-        # elif len(lst)==2:
-        #     return -1
-        # elif len(lst)==1 and lst[0]!=fnd:
-        #     return -1
-        # col=0
-        # mid=len(lst)//2
-        # # print('*')
-        # # print(mid)
-        # # print(len(lst[:mid]))
-        # # print(len(lst[mid:]))
-        # # print(lst[:mid])
-        # # print(lst[mid:])
-        # # print(lst)
-        # # print('*')
-        # # input()
-        # if lst[mid]>fnd and (lst[mid-1]<fnd) ==False:
-        #     return binary_search(lst[:mid], fnd)
-        # elif lst[mid]<fnd and (lst[mid+1]>fnd) == False:
-        #     col=len(lst[:mid])
-        #     return binary_search(lst[mid:], fnd)+col
-        # elif lst[mid]==fnd:
-        #     return mid+col
-        # elif lst[mid]!=fnd and lst[mid+1]>fnd and lst[mid-1]<fnd:
-        #     return -1
-    else:
-        return -1
+def binary_search(inputArray, value):
+    high = len(inputArray) - 1
+    low = 0
+
+    found = False
+    loc = -1
+
+    while(found != True):
+        if(high < low):
+            return -1
+
+        mid = low + (high - low) // 2
+
+        if(inputArray[mid] < value):
+            low = mid + 1
+
+        if(inputArray[mid] > value):
+            high = mid - 1
+
+        if(inputArray[mid] == value):
+            return mid

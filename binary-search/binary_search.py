@@ -1,22 +1,20 @@
+def binary_search(lst, to_find):
+    # search for the element to_find inside lst
+    # if found, return index of element
+    # else return -1
+	a = int(len(lst))
+	b = int(a/2)
+	if to_find in lst:
+		for i in range (b):
+			B = lst[:len(lst)//2]
+			C = lst[len(lst)//2:]
+			if to_find in B:
+				lst = B
+			elif to_find in C:
+				lst = C
+		return(lst[0])
+	return(-1)
 
-def binary_search(inputArray, value):
-    high = len(inputArray) - 1
-    low = 0
-
-    found = False
-    loc = -1
-
-    while(found != True):
-        if(high < low):
-            return -1
-
-        mid = low + (high - low) // 2
-
-        if(inputArray[mid] < value):
-            low = mid + 1
-
-        if(inputArray[mid] > value):
-            high = mid - 1
-
-        if(inputArray[mid] == value):
-            return mid
+# listt = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# asd = 9
+# print(binary_search(listt,asd))

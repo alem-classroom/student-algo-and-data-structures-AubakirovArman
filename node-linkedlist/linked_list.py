@@ -40,9 +40,6 @@ class LinkedList:
         pointer = self.head
         sll_list = []
         while pointer:
-            print(pointer.value)
-            print('s')
-            
             if pointer.value is not None:
                 sll_list.append(pointer.value)
             pointer = pointer.next

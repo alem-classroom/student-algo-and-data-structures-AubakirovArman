@@ -1,5 +1,5 @@
 def maxCoins(lst, n):
-    sum = 0
+	sum = 0
 	sum2 = 0
 	m = 1
 	# change first row

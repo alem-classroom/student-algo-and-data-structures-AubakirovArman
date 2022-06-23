@@ -39,9 +39,8 @@ class LinkedList:
         # return the list
         pointer = self.head
         sll_list = []
-        while pointer:
-            if pointer.value is not None:
-                sll_list.append(pointer.value)
+        while pointer.next is not None:
+            sll_list.append(pointer.value)
             pointer = pointer.next
             
             

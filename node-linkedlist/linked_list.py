@@ -44,7 +44,9 @@ class LinkedList:
             pointer = pointer.next
             
             
+        sll_list.append(pointer.value)
         return sll_list
+    
 my_list = LinkedList()
 
 my_list.head = Node("Mon")

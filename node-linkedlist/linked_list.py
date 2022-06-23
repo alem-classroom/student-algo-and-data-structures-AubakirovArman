@@ -13,7 +13,7 @@ class LinkedList:
     def get_head(self):
         # return head of the Linked List
         cur_node = self.head
-        cur_node = cur_node.next
+#         cur_node = cur_node.next
         return(cur_node.value)
 
     def insert_back(self, node):
@@ -39,10 +39,12 @@ class LinkedList:
         # return the list
         pointer = self.head
         sll_list = []
-
         while pointer:
-
-            sll_list.append(pointer.value)
+            print(pointer.value)
+            print('s')
+            
+            if pointer.value is not None:
+                sll_list.append(pointer.value)
             pointer = pointer.next
             
             
@@ -57,6 +59,6 @@ e2.next = e3
 # my_list.insert_back(725)
 
 print(my_list.get_list())
-print(len(my_list.get_list()))
-print(my_list.get_head())
-# print(my_list.get_last())
+# print(len(my_list.get_list()))
+# print(my_list.get_head())
+# # print(my_list.get_last())

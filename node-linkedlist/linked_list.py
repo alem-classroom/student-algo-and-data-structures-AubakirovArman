@@ -47,3 +47,16 @@ class LinkedList:
             
             
         return sll_list
+my_list = LinkedList()
+
+my_list.head = Node("Mon")
+e2 = Node("Tue")
+e3 = Node("Thu")
+my_list.head.next = e2
+e2.next = e3
+# my_list.insert_back(725)
+
+print(my_list.get_list())
+print(len(my_list.get_list()))
+print(my_list.get_head())
+# print(my_list.get_last())

@@ -9,3 +9,4 @@ def fib(num):
         d=fac+fac2
         fac=fac2
         fac2=d
+    return fac
